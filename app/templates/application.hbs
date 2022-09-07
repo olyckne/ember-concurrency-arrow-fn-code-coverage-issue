@@ -1,7 +1,9 @@
 {{page-title "ConcurrencyArrowFn"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<p>value: {{this.value}}</p>
+<p>Task running: {{this.fooTask.isRunning}}</p>
 
+<button type="button" {{on "click" (perform this.fooTask)}}>
+  Run task
+</button>
 {{outlet}}
